@@ -11,7 +11,7 @@ fn greetings(s: &str) {
     println!("{}",s)
 }
 
---------- Solution ---------
+--------- Solution 1 ---------
 
 fn main() {
     // Create a Box<str> (string on the heap)
@@ -21,6 +21,21 @@ fn main() {
     // Pass a reference to s to greetings
     // &s is &Box<str>, but greetings expects &str
     greetings(&s)  
+}
+
+fn greetings(s: &str) {
+    println!("{}", s)
+}
+
+--------- Solution 2 ---------
+
+fn main() {
+    // &str is an immutable reference to a fixed string in binary
+    let s: &str = "hello, world";
+    
+    // Pass s directly to greetings
+    // s is already &str, so no conversion needed!
+    greetings(s)  // ✅ Works perfectly
 }
 
 fn greetings(s: &str) {
