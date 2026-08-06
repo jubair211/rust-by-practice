@@ -1,7 +1,8 @@
 --------- Problem ---------
-
+///  Error: Borrow an immutable object as mutable 
+    
 fn main() {
-    // Fix error by modifying this line
+    // Fix the error by modifying this line
     let  s = String::from("hello, ");
 
     borrow_object(&mut s);
