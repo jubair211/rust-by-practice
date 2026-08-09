@@ -32,3 +32,14 @@ fn main() {
 fn greetings(s: String) {
     println!("{}", s)
 }
+
+--------- Solution 3 ---------
+
+fn main() {
+    let s: &str = "hello, world";
+    greetings(s.to_owned())  // &str -> String
+}
+
+fn greetings(s: String) {
+    println!("{}", s)
+}
