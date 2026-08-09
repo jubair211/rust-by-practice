@@ -10,7 +10,7 @@ fn main() {
 --------- Solution ---------
 
 fn main() {
-    let t = ("i", "am", "sunface");
+    let t: (&str, &str, &str) = ("i", "am", "sunface");
     assert_eq!(t.2, "sunface");
 
     println!("Success!");
