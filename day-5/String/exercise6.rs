@@ -18,7 +18,7 @@ fn main() {
     // s1 is String, &s2 is &str (String -> &str via as_str())
     // s1 is MOVED here, s2 is BORROWED
     let s3: String = s1 + s2.as_str(); // String -> &str
-    assert_eq!(s3, "hello,world!");  // ✅ Concatenated correctly
+    assert_eq!(s3, "hello,world!");  // Concatenated correctly
     println!("{}", s3);              // Output: hello,world!
 }
 
