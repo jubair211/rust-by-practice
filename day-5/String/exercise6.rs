@@ -22,7 +22,7 @@ fn main() {
     println!("{}", s3);              // Output: hello,world!
 }
 
---------- Solution 1 ---------
+--------- Solution 2 ---------
 
 fn main() {
     let s1: String = String::from("hello,");
