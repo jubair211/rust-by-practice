@@ -9,8 +9,8 @@ enum Message {
 }
 
 fn main() {
-    let msg1 = Message::Move{__}; // Instantiating with x = 1, y = 2 
-    let msg2 = Message::Write(__); // Instantiating with "hello, world!"
+    let msg1 = Message::Move{__};                // Instantiating with x = 1, y = 2 
+    let msg2 = Message::Write(__);             // Instantiating with "hello, world!"
 
     println!("Success!");
 }
@@ -27,10 +27,10 @@ enum Message {
 
 fn main() {
     // Create a Move variant with named fields
-    let msg1 = Message::Move { x: 1, y: 2 };                    // Struct-like syntax
+    let msg1: Message = Message::Move { x: 1, y: 2 };                    // Struct-like syntax
     
     // Create a Write variant with a String
-    let msg2 = Message::Write(String::from("hello, world!"));            // Tuple-like syntax
+    let msg2: Message = Message::Write(String::from("hello, world!"));            // Tuple-like syntax
 
     println!("Success!");
 }
